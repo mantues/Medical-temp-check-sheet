@@ -70,13 +70,15 @@ win.title("体温記録表")  # ウィンドウのタイトルを指定
 win.geometry("250x250")  # サイズを指定
 
 #画像読み込み（任意）png, pgm, ppm, gif形式のみ
-image = tk.PhotoImage(file="pic.png")
+image_file = "pic.png"
+image = tk.PhotoImage(file=image_file)
 #test_canvas = tk.Canvas(bg="black", width=100, height=100)
 #test_canvas.grid(row=0, column=0)
 #im = ImageTk.PhotoImage(image=image)
 #test_canvas.create_image(10, 10, anchor='nw', image=image)
-img=tk.Label(image=image)
-img.pack()
+if (os.path.exists(image_file)):
+    img=tk.Label(image=image)
+    img.pack()
 
 # 部品を作成
 labelID = tk.Label(win, text='ID:')  # ウィンドウ内に配置するラベルの内容
