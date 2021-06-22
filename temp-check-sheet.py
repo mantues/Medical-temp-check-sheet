@@ -1,4 +1,4 @@
-# 参考サイト ↓
+# web ↓
 # https://office54.net/python/tkinter/textbox-get-insert
 
 import tkinter as tk
